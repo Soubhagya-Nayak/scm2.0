@@ -6,6 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>This is About Page</h1>
+    <h1>This is About Page.</h1>
+    <hr />
+    <!-- Using Fragment -->
+    <div class="host-tag" th:replace="${isLogin} ? ~{base :: parent(~{::section})} : ~{base :: test(~{::#not_logged_in})}">
+        <section>
+            <h1>User Logged in.</h1>
+            <h1>This is Dynamic Content of About page.</h1>  
+            <button>Click on Dyanamic Content.</button>
+        </section>
+
+        <section id="not_logged_in">
+            <h1>User is not Logged in.</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores aliquam neque, modi possimus sapiente officia totam aliquid quis nam dignissimos.</p>
+        </section>
+    </div>
 </body>
 </html>

@@ -7,5 +7,27 @@
 </head>
 <body>
     <h1>This is Service Page.</h1>
+    <hr />
+    <!-- Using Fragment -->
+    <div class="host-tag" th:replace="~{base :: parent(~{::.third-content})}">
+
+        <section id="main-content">
+            <h1>Main Content Header</h1>
+            <p>You can pass your 1st dynamic content here.</p>
+            <button>Click Here for 1st dynamic content.</button>
+        </section>
+
+        <section id="second-content">
+            <h1>2nd Content Header</h1>
+            <p>You can pass your 2nd dynamic content here.</p>
+            <button>Click Here for 2nd dynamic content.</button>
+        </section>
+
+        <section class="third-content">
+            <h1>3rd Content Header</h1>
+            <p>You can pass your 3rd dynamic content here.</p>
+            <button>Click Here for 3rd dynamic content.</button>
+        </section>
+    </div>
 </body>
 </html>
